@@ -19,7 +19,7 @@ public class TorchScript : MonoBehaviour
     bool trapb = false;
     bool trapnb = false;
     bool callTrapFunction = false;
-
+    public List<GameObject> cloneList = new List<GameObject>();
     void Update()
     {
         
@@ -126,7 +126,8 @@ public class TorchScript : MonoBehaviour
            
             counterTorches.torches -= 1;
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Instantiate(torch, new Vector3(mousePos.x,mousePos.y,0),Quaternion.identity);
+            GameObject newClone = Instantiate(torch, new Vector3(mousePos.x,mousePos.y,0),Quaternion.identity);
+            cloneList.Add(newClone);
            
             
         }

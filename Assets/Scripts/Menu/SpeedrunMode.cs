@@ -11,6 +11,5 @@ public class SpeedrunMode : MonoBehaviour
             isSpeedrun = false;
         else
             isSpeedrun = true;
-        Debug.Log(isSpeedrun);
     }
 }

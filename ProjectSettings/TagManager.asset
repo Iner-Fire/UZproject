@@ -19,6 +19,10 @@ TagManager:
   - endPath
   - desk
   - shop
+  - Torch
+  - FOGM
+  - FOGS
+  - FOGC
   layers:
   - Default
   - TransparentFX

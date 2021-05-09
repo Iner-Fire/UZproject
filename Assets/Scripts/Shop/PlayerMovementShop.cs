@@ -1,76 +1,67 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class playerMovement : MonoBehaviour
+public class PlayerMovementShop : MonoBehaviour
 {
-	public int maxHealth = 3;
-	public int currentHealth;
+	int currentHealth;
+	int maxHP;
+	public HealthBar healthBar;
 	public float moveSpeed = 1f;
 	public Vector2 movement;
 	public Rigidbody2D rigibody;
 	public Animator anim;
 	public float hf = 0.0f;
 	public float speed = 0.0f;
-	public AudioClip clip;
 	public keyPickup key;
 	public Animator szop;
-	public SpeedrunTime time;
 	public int potions;
 	public int trap;
 	public int coins;
 	public int torches;
 	public int isChangdTimer = 0;
 	int saveData = 0;
-	public  GameObject FOGM;
-	public GameObject torch;
 	public int keyAmount;
-	public HealthBar healthBar;
-	public Text textCounterTrap;
 	public Text textCounterCoins;
 	public Text textCounterPotion;
+	public Text textCounterTrap;
 	public Text textCounterKeys;
 	public Text textCounterTorch;
-	public TorchScript saveTorch;
-	public GameObject torchFab;
 
 
-    void Awake()
-    {
+	void Awake()
+	{
+		GameObject FOGM = GameObject.FindGameObjectWithTag("FOGM");
+		GameObject FOGS = GameObject.FindGameObjectWithTag("FOGS");
+		GameObject FOGC = GameObject.FindGameObjectWithTag("FOGC");
+		if(FOGM && FOGS && FOGC)
+        {
+			Destroy(FOGM);
+			Destroy(FOGS);
+			Destroy(FOGC);
+        }			
+
 		if (PlayerPrefs.GetInt("saveData") == 1)
 		{
-			
-				coins = PlayerPrefs.GetInt("goldAmount");
-			
-				torches = PlayerPrefs.GetInt("torchAmount");
-			
-				trap = PlayerPrefs.GetInt("trapAmount");
-			
-				potions = PlayerPrefs.GetInt("potionAmount");
-		}
 
-		Scene currentScene = SceneManager.GetActiveScene();
-		string sceneName = currentScene.name;
-		if (sceneName == "Game")
-		{
-			DontDestroyOnLoad(FOGM);
-			for (int i = 0; i < PlayerPrefs.GetFloat("CloneListCount"); i++)
-			{
-				Instantiate(torchFab, new Vector3(PlayerPrefs.GetFloat("Torchx" + i),
-				PlayerPrefs.GetFloat("Torchy" + i),
-				PlayerPrefs.GetFloat("Torchz" + i)), Quaternion.identity);
-			}
+			coins = PlayerPrefs.GetInt("goldAmount");
+
+			torches = PlayerPrefs.GetInt("torchAmount");
+
+			trap = PlayerPrefs.GetInt("trapAmount");
+
+			potions = PlayerPrefs.GetInt("potionAmount");
 			this.transform.position = new Vector3(PlayerPrefs.GetFloat("playerPosistionX"),
 			PlayerPrefs.GetFloat("playerPosistionY"),
 			PlayerPrefs.GetFloat("playerPosistionZ"));
-		}
+		}	
 	}
-    void Start()
+	void Start()
 	{
-		currentHealth = maxHealth;
-		healthBar.SetMaxHP(maxHealth);
+		maxHP = currentHealth;
+		healthBar.SetMaxHP(maxHP);
 		rigibody = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 
@@ -79,8 +70,6 @@ public class playerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		TorchScript saveDataTorch = saveTorch.GetComponent<TorchScript>();
-		SpeedrunTime timer = time.GetComponent<SpeedrunTime>();
 		keyPickup keyCounter = key.GetComponent<keyPickup>();
 		textCounterCoins.text = coins.ToString();
 		textCounterPotion.text = potions.ToString();
@@ -113,23 +102,10 @@ public class playerMovement : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			if (saveDataTorch.cloneList.Count > 0)
-			{
-				for (int i = 0; i < saveDataTorch.cloneList.Count; i++)
-				{
-					PlayerPrefs.SetFloat("Torchx" + i, saveDataTorch.cloneList[i].transform.position.x);
-					PlayerPrefs.SetFloat("Torchy" + i, saveDataTorch.cloneList[i].transform.position.y);
-					PlayerPrefs.SetFloat("Torchz" + i, saveDataTorch.cloneList[i].transform.position.z);
-					PlayerPrefs.SetFloat("CloneListCount", saveDataTorch.cloneList.Count);
-				}
-			}
+			
 			PlayerPrefs.SetFloat("playerPosistionX", this.gameObject.transform.position.x);
 			PlayerPrefs.SetFloat("playerPosistionY", this.gameObject.transform.position.y);
 			PlayerPrefs.SetFloat("playerPosistionZ", this.gameObject.transform.position.z);
-			PlayerPrefs.SetFloat("timer_m", timer.minutes);
-			PlayerPrefs.SetFloat("timer_s", timer.seconds);
-			isChangdTimer = 1;
-			PlayerPrefs.SetInt("isChangedTimer", isChangdTimer);
 
 
 
@@ -148,11 +124,11 @@ public class playerMovement : MonoBehaviour
 		anim.SetFloat("Speed", speed);
 
 	}
-    private void OnApplicationQuit()
-    {
+	private void OnApplicationQuit()
+	{
 		PlayerPrefs.DeleteAll();
-    }
-    void FixedUpdate()
+	}
+	void FixedUpdate()
 	{
 		rigibody.MovePosition(rigibody.position + movement * moveSpeed * Time.fixedDeltaTime);
 	}
@@ -164,15 +140,15 @@ public class playerMovement : MonoBehaviour
 			shopDialog pop = GameObject.FindGameObjectWithTag("desk").GetComponent<shopDialog>();
 			pop.PopUp();
 		}
-		if(collision.gameObject.CompareTag("Glue"))
-        {
+		if (collision.gameObject.CompareTag("Glue"))
+		{
 			moveSpeed /= 3;
 			currentHealth -= 1;
 			healthBar.SetHP(currentHealth);
-        }
+		}
 	}
-    private void OnTriggerExit2D(Collider2D collision)
-    {
+	private void OnTriggerExit2D(Collider2D collision)
+	{
 		szop.SetTrigger("close");
 		if (collision.gameObject.CompareTag("Glue"))
 		{
@@ -180,4 +156,5 @@ public class playerMovement : MonoBehaviour
 		}
 	}
 }
+
 

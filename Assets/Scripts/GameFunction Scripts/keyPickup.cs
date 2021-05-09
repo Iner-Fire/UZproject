@@ -7,21 +7,24 @@ public class keyPickup : MonoBehaviour
     
 {
     public int key;
-    public Text mytext = null;
+    public playerMovement keys;
 
-    private void Start()
+    void Start()
     {
-
+        key = PlayerPrefs.GetInt("keyAmount");
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PlayerPrefs.SetInt("keyAmount", key);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Key"))
         {
             key += 1;
-            Debug.Log("Podniosles klucz");
             Destroy(GameObject.FindGameObjectWithTag("Key"));        }
-    }
-     void Update()
-    {
     }
 }

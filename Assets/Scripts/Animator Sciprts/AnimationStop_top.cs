@@ -11,6 +11,7 @@ public class AnimationStop_top : MonoBehaviour
     private GameObject playerPosition;
     private GameObject doorPosition;
     public playerMovement playerMovement;
+    int saveData;
 
 
 
@@ -51,6 +52,13 @@ public class AnimationStop_top : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(delay());
+            PlayerPrefs.SetInt("goldAmount", playerMovement.coins);
+            PlayerPrefs.SetInt("torchAmount", playerMovement.torches);
+            PlayerPrefs.SetInt("potionAmount", playerMovement.potions);
+            PlayerPrefs.SetInt("trapAmount", playerMovement.trap);
+            saveData = 1;
+            PlayerPrefs.SetInt("saveData", saveData);
+            PlayerPrefs.Save();
             SceneManager.LoadScene("shopScene");
         }
 

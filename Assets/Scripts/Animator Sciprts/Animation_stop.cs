@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Animation_stop : MonoBehaviour
 {
     private int klucze;
-
-    public Text mytext;
     public Animator anim;
     private GameObject playerPosition;
     private GameObject doorPosition;
@@ -26,7 +24,6 @@ public class Animation_stop : MonoBehaviour
         GameObject key = GameObject.Find("Player");
         keyPickup keypick = key.GetComponent<keyPickup>();
         klucze = keypick.key;
-        mytext.text = "Ilosc kluczy : " + keypick.key.ToString();
         if (Input.GetKeyDown(KeyCode.E) && klucze >= 1)
         {
 

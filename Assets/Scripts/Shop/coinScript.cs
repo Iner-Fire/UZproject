@@ -8,25 +8,28 @@ public class coinScript : MonoBehaviour
 {
     public Animator anim;
     public Text trapPrice;
-    public Text potionPrice;
+    public Text torchPrice;
     public Text keyPrice;
     public Text playerCoins;
-    public playerMovement player;
+    public PlayerMovementShop player;
     public keyPickup key;
     int counterTraps;
     int counterPotions;
     int counterKeys;
+    int counterTorches;
     int coins;
     public bool isClicked;
 
 
     void Start()
     {
-        playerMovement counter = player.GetComponent<playerMovement>();
+        PlayerMovementShop counter = player.GetComponent<PlayerMovementShop>();
         keyPickup keyCounter = key.GetComponent<keyPickup>();
         counterTraps = counter.trap;
         counterPotions = counter.potions;
         counterKeys = keyCounter.key;
+        counterTorches = counter.torches;
+        
         coins = counter.coins;
     }
 
@@ -46,12 +49,12 @@ public class coinScript : MonoBehaviour
             trapPrice.text = (counterTraps * 3 + 3).ToString();
         else if (counterTraps == 1)
             trapPrice.text = "6";
-        if (counterPotions > 1)
-            potionPrice.text = (counterPotions * 2 + 2).ToString();
-        else if (counterPotions == 0)
-            potionPrice.text = "2";
-        else if (counterPotions == 1)
-            potionPrice.text = "4";
+        if (counterTorches > 1)
+            torchPrice.text = (counterTorches * 7 + 7).ToString();
+        else if (counterTorches == 0)
+            torchPrice.text = "7";
+        else if (counterTorches == 1)
+            torchPrice.text = "14";
 
         /* if (isClicked)
          {
@@ -111,27 +114,27 @@ public class coinScript : MonoBehaviour
 
        
         //potionPrice.text = (counterPotions * 2).ToString();
-        if (coins >= counterPotions * 2)
+        if (coins >= counterTorches * 7)
         {
-            if (counterPotions == 0)
+            if (counterTorches == 0)
             {
-                coins -= 2;
-                player.coins -= 2;
+                coins -= 7;
+                player.coins -= 7;
             }
-            else if (counterPotions == 1)
+            else if (counterTorches == 1)
             {
-                coins -= 4;
-                player.coins -= 4;
+                coins -= 14;
+                player.coins -= 14;
             }
 
-            else if (counterPotions > 1)
+            else if (counterTorches > 1)
             {
 
-                coins -= counterPotions * 2 + 2;
-                player.coins -= counterPotions * 2 + 2;
+                coins -= counterTorches * 7 + 7;
+                player.coins -= counterTorches * 7 + 7;
             }
-            counterPotions++;
-            player.potions++;
+            counterTorches++;
+            player.torches++;
             anim.SetBool("click", true);
             anim.SetBool("idle", true);
             isClicked = true;

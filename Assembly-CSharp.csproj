@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Timer\SpeedrunTime.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\TabPop\PopUpTab.cs" />
     <Compile Include="Assets\Scripts\Player Sciprts\PlayerData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Animator Sciprts\stopAnimationShop.cs" />
+    <Compile Include="Assets\Scripts\GUI\followGUI.cs" />
     <Compile Include="Assets\Tekstury\RenderTexture\gameManager.cs" />
     <Compile Include="Assets\Scripts\Animator Sciprts\Animation_stop.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
@@ -114,9 +116,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\Animator Sciprts\AnimationStop_middle.cs" />
-    <Compile Include="Assets\coinScript.cs" />
-    <Compile Include="Assets\Scripts\GUI\followGUI.cs" />
-    <Compile Include="Assets\Scripts\TabPop\PopUpTab.cs" />
+    <Compile Include="Assets\Scripts\Shop\coinScript.cs" />
+    <Compile Include="Assets\Scripts\Other\DontDestroyOnLoad\DontDestroy.cs" />
+    <Compile Include="Assets\Scripts\GUI\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Shop\PlayerMovementShop.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
