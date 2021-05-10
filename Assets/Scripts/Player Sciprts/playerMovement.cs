@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
+	public int deathCounter = 0;
 	public int maxHealth = 3;
 	public int currentHealth;
 	public float moveSpeed = 1f;
@@ -35,13 +36,17 @@ public class playerMovement : MonoBehaviour
 	public Text textCounterTorch;
 	public TorchScript saveTorch;
 	public GameObject torchFab;
+	public RespawnPoints respawn;
+	int Respawn = 0;
 
 
     void Awake()
     {
+		respawn.Spawn();
 		if (PlayerPrefs.GetInt("saveData") == 1)
 		{
-			
+				deathCounter = PlayerPrefs.GetInt("deathCounter");
+
 				coins = PlayerPrefs.GetInt("goldAmount");
 			
 				torches = PlayerPrefs.GetInt("torchAmount");
@@ -49,26 +54,44 @@ public class playerMovement : MonoBehaviour
 				trap = PlayerPrefs.GetInt("trapAmount");
 			
 				potions = PlayerPrefs.GetInt("potionAmount");
+			/*if (PlayerPrefs.GetInt("respawn") == 1)
+				respawn.Spawn();*/
+			
 		}
-
+		if (PlayerPrefs.GetInt("respawn") == 0)
+		{
+			this.transform.position = new Vector3(PlayerPrefs.GetFloat("playerPosistionX"),
+			PlayerPrefs.GetFloat("playerPosistionY"),
+			PlayerPrefs.GetFloat("playerPosistionZ"));
+		}
+		/*else if (PlayerPrefs.GetInt("respawn") == 1)
+			respawn.Spawn();
+*/
 		Scene currentScene = SceneManager.GetActiveScene();
 		string sceneName = currentScene.name;
 		if (sceneName == "Game")
 		{
 			DontDestroyOnLoad(FOGM);
+			if(PlayerPrefs.GetInt("respawn") == 1)
+            {
+				Destroy(GameObject.FindGameObjectWithTag("FOGM"));
+				PlayerPrefs.SetInt("respawn", 0);
+				PlayerPrefs.Save();
+            }
+			else
+				DontDestroyOnLoad(FOGM);
 			for (int i = 0; i < PlayerPrefs.GetFloat("CloneListCount"); i++)
 			{
 				Instantiate(torchFab, new Vector3(PlayerPrefs.GetFloat("Torchx" + i),
 				PlayerPrefs.GetFloat("Torchy" + i),
 				PlayerPrefs.GetFloat("Torchz" + i)), Quaternion.identity);
 			}
-			this.transform.position = new Vector3(PlayerPrefs.GetFloat("playerPosistionX"),
-			PlayerPrefs.GetFloat("playerPosistionY"),
-			PlayerPrefs.GetFloat("playerPosistionZ"));
+			
 		}
 	}
     void Start()
 	{
+		
 		currentHealth = maxHealth;
 		healthBar.SetMaxHP(maxHealth);
 		rigibody = GetComponent<Rigidbody2D>();
@@ -128,6 +151,7 @@ public class playerMovement : MonoBehaviour
 			PlayerPrefs.SetFloat("playerPosistionZ", this.gameObject.transform.position.z);
 			PlayerPrefs.SetFloat("timer_m", timer.minutes);
 			PlayerPrefs.SetFloat("timer_s", timer.seconds);
+			PlayerPrefs.SetFloat("start", timer.start);
 			isChangdTimer = 1;
 			PlayerPrefs.SetInt("isChangedTimer", isChangdTimer);
 
@@ -168,6 +192,19 @@ public class playerMovement : MonoBehaviour
         {
 			moveSpeed /= 3;
 			currentHealth -= 1;
+			if (currentHealth == 0)
+			{
+				deathCounter++;
+				PlayerPrefs.SetInt("deathCounter", deathCounter);
+				Respawn = 1;
+				PlayerPrefs.SetInt("respawn", Respawn);
+				SceneManager.LoadScene("Game");
+	
+
+
+			}
+				
+			
 			healthBar.SetHP(currentHealth);
         }
 	}
