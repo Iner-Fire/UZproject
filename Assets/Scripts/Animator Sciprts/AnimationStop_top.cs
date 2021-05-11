@@ -8,10 +8,12 @@ public class AnimationStop_top : MonoBehaviour
     private int klucze;
 
     public Animator anim;
+    public Animator animPath;
     private GameObject playerPosition;
     private GameObject doorPosition;
     public playerMovement playerMovement;
     int saveData;
+    public bool isDoorOpened = false;
 
 
 
@@ -38,7 +40,10 @@ public class AnimationStop_top : MonoBehaviour
                     {
                         Destroy(GameObject.FindGameObjectWithTag("Colliber_top"));
                         anim.SetBool("open", true);
+                        animPath.SetBool("open", true);
                         keypick.key--;
+                        isDoorOpened = true;
+
                     }
                 }
 
@@ -59,7 +64,8 @@ public class AnimationStop_top : MonoBehaviour
             saveData = 1;
             PlayerPrefs.SetInt("saveData", saveData);
             PlayerPrefs.Save();
-            SceneManager.LoadScene("shopScene");
+            
+            //SceneManager.LoadScene("shopScene");
         }
 
     }

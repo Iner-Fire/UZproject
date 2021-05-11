@@ -15,11 +15,11 @@ C:/Users/MISZCZUNIO/Desktop/unity_projekt
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56207
+52143
 Successfully changed project path to: C:/Users/MISZCZUNIO/Desktop/unity_projekt
 C:/Users/MISZCZUNIO/Desktop/unity_projekt
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 58.84 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 47.14 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -39,31 +39,31 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56396
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56412
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002070 seconds.
+Registered in 0.004246 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 70.69 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 49.80 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.270 seconds
+- Completed reload, in  2.013 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001216 seconds.
+Registered in 0.002942 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 109.90 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 50.06 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.356 seconds
+- Completed reload, in  1.203 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -71,54 +71,107 @@ Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
 
 Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
 
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.85 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1887 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 88.5 MB.
-System memory in use after: 88.6 MB.
+Unloading 1890 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.6 MB.
+System memory in use after: 88.7 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2336.
-Total: 9.139500 ms (FindLiveObjects: 0.235000 ms CreateObjectMapping: 0.081200 ms MarkObjects: 8.787800 ms  DeleteObjects: 0.033300 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2339.
+Total: 2.323300 ms (FindLiveObjects: 0.239100 ms CreateObjectMapping: 0.098700 ms MarkObjects: 1.950100 ms  DeleteObjects: 0.033500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Tekstury/Minotaur Textures/MinoTurns.prefab
-  artifactKey: Guid(a2f78affcb061fe458fa72b36d1e5feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tekstury/Minotaur Textures/MinoTurns.prefab using Guid(a2f78affcb061fe458fa72b36d1e5feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f534c41b1fdf67c2279bf2dfdb54b87a') in 0.146568 seconds
-  Import took 0.175890 seconds .
+  path: Assets/Tekstury/EQ/trap2.png
+  artifactKey: Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/EQ/trap2.png using Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94d1750dc7d6412cdbacfde8d961af94') in 1.341277 seconds
+  Import took 1.347979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000723 seconds.
+  path: Assets/Tekstury/EQ/trap4.png
+  artifactKey: Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/EQ/trap4.png using Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3ba9c04dce26b9f06be19d399145c81') in 0.047262 seconds
+  Import took 0.079399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Tekstury/EQ/trap3.png
+  artifactKey: Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/EQ/trap3.png using Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49bda454ffbc2fa3cdddbe51e1280d2d') in 0.015127 seconds
+  Import took 0.019166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.609963 seconds.
+  path: Assets/Tekstury/EQ/trap2.png
+  artifactKey: Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/EQ/trap2.png using Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e886b1eaa94089c846423270c2236950') in 0.013079 seconds
+  Import took 0.018784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.879914 seconds.
+  path: Assets/Tekstury/EQ/trap3.png
+  artifactKey: Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/EQ/trap3.png using Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '580677902fe682621154e27dcc9ea0a5') in 0.019692 seconds
+  Import took 0.025087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.810615 seconds.
+  path: Assets/Tekstury/EQ/trap2.png
+  artifactKey: Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/EQ/trap2.png using Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd06d613513f1f6d1a23970b36c4950df') in 0.012809 seconds
+  Import took 0.018117 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Tekstury/EQ/trap4.png
+  artifactKey: Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/EQ/trap4.png using Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c933fa71c5084156aed08e15ea9f31f4') in 0.028252 seconds
+  Import took 0.033628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Tekstury/EQ/trap3.png
+  artifactKey: Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/EQ/trap3.png using Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47600250749cbb1008dc529aaa87e946') in 0.017665 seconds
+  Import took 0.021962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.671568 seconds.
+  path: Assets/Tekstury/Trap/trap 1.prefab
+  artifactKey: Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap 1.prefab using Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd964d97062caf04f2730044dd8d5b1e9') in 0.068455 seconds
+  Import took 0.072417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Tekstury/Trap/trap.png
+  artifactKey: Guid(7bf22e828daee2849852e50efbaf001a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap.png using Guid(7bf22e828daee2849852e50efbaf001a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fbc59608dfc63588ce08a97c556a206') in 0.019229 seconds
+  Import took 0.024161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.864994 seconds.
+  path: Assets/Tekstury/Trap/trap 1.prefab
+  artifactKey: Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap 1.prefab using Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b06d7e0bd1659a68a306b241c1685e2e') in 0.015688 seconds
+  Import took 0.026117 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001165 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.098 seconds
-Platform modules already initialized, skipping
-Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
-
-Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
-
-Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1862 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 90.1 MB.
-System memory in use after: 90.2 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2347.
-Total: 2.625500 ms (FindLiveObjects: 0.481400 ms CreateObjectMapping: 0.100800 ms MarkObjects: 2.025800 ms  DeleteObjects: 0.015400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001685 seconds.
+Registered in 0.001279 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
@@ -127,19 +180,1648 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.086 seconds
+- Completed reload, in  1.073 seconds
 Platform modules already initialized, skipping
 Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
 
 Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
 
-Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1862 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 90.1 MB.
 System memory in use after: 90.2 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2351.
-Total: 2.048400 ms (FindLiveObjects: 0.200100 ms CreateObjectMapping: 0.081200 ms MarkObjects: 1.732900 ms  DeleteObjects: 0.033200 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2357.
+Total: 1.786400 ms (FindLiveObjects: 0.167300 ms CreateObjectMapping: 0.065000 ms MarkObjects: 1.538900 ms  DeleteObjects: 0.014200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.790202 seconds.
+  path: Assets/Tekstury/Trap/trap2.png
+  artifactKey: Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap2.png using Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '479c5f57b845792ceaa8dbcf119d4ec3') in 0.129646 seconds
+  Import took 0.137456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Tekstury/Trap/trap4.png
+  artifactKey: Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap4.png using Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edc544b6474d3b91ca790afcb9fa3aaf') in 0.016713 seconds
+  Import took 0.023044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Tekstury/Trap/trap3.png
+  artifactKey: Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap3.png using Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '210672c2ba9f8ef7d9616b2ddb4ff39c') in 0.035996 seconds
+  Import took 0.042435 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001456 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.032 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.2 MB.
+System memory in use after: 90.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2362.
+Total: 1.778600 ms (FindLiveObjects: 0.171500 ms CreateObjectMapping: 0.067200 ms MarkObjects: 1.525000 ms  DeleteObjects: 0.013900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.659667 seconds.
+  path: Assets/Tekstury/Trap/trap2.png
+  artifactKey: Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap2.png using Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb64e641013034a5ca7c7a375d8de9d9') in 0.098059 seconds
+  Import took 0.110331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Tekstury/Trap/trap4.png
+  artifactKey: Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap4.png using Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0226e36f9674a4f3a4944a2d2db8064a') in 0.024847 seconds
+  Import took 0.032829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Tekstury/Trap/trap3.png
+  artifactKey: Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap3.png using Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a656abc75b41ccc3f4d9aeb028d1733b') in 0.050887 seconds
+  Import took 0.060883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Tekstury/Trap/trap4.png
+  artifactKey: Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap4.png using Guid(687958806555c0746a758c3637c23a37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0226e36f9674a4f3a4944a2d2db8064a') in 0.028498 seconds
+  Import took 0.044373 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001293 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.309 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.2 MB.
+System memory in use after: 90.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2367.
+Total: 2.439600 ms (FindLiveObjects: 0.293400 ms CreateObjectMapping: 0.107200 ms MarkObjects: 2.007700 ms  DeleteObjects: 0.029800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.411359 seconds.
+  path: Assets/Tekstury/Trap/trap 1.prefab
+  artifactKey: Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap 1.prefab using Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cda6fca950289e87f52a7cde986250c8') in 0.083349 seconds
+  Import took 0.088292 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001181 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.022 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.2 MB.
+System memory in use after: 90.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2372.
+Total: 2.191200 ms (FindLiveObjects: 0.437300 ms CreateObjectMapping: 0.108700 ms MarkObjects: 1.627200 ms  DeleteObjects: 0.016700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.656657 seconds.
+  path: Assets/Tekstury/Trap/trap 1.prefab
+  artifactKey: Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap 1.prefab using Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d99363ab0de7c2bf9b910cf3c12fdd1') in 0.060183 seconds
+  Import took 0.063589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096368 seconds.
+  path: Assets/Tekstury/Trap/trap 1.prefab
+  artifactKey: Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap 1.prefab using Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d99363ab0de7c2bf9b910cf3c12fdd1') in 0.016919 seconds
+  Import took 0.020102 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001516 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.994 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2377.
+Total: 1.872700 ms (FindLiveObjects: 0.195900 ms CreateObjectMapping: 0.081400 ms MarkObjects: 1.520900 ms  DeleteObjects: 0.073400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.004095 seconds.
+  path: Assets/Tekstury/Trap/trap 1.prefab
+  artifactKey: Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap 1.prefab using Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b62c896ae3956dc4e95ef991720e9c9c') in 0.059134 seconds
+  Import took 0.062600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097856 seconds.
+  path: Assets/Tekstury/Trap/trap 1.prefab
+  artifactKey: Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap 1.prefab using Guid(298b9781bc031904f9c5b532aa51c98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b62c896ae3956dc4e95ef991720e9c9c') in 0.011311 seconds
+  Import took 0.016731 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001013 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.87 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.152 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2382.
+Total: 1.946400 ms (FindLiveObjects: 0.201700 ms CreateObjectMapping: 0.079600 ms MarkObjects: 1.596500 ms  DeleteObjects: 0.067300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002250 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.377 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2386.
+Total: 3.508700 ms (FindLiveObjects: 0.351600 ms CreateObjectMapping: 0.177200 ms MarkObjects: 2.960700 ms  DeleteObjects: 0.017600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001568 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.908 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2390.
+Total: 3.197000 ms (FindLiveObjects: 0.312800 ms CreateObjectMapping: 0.283300 ms MarkObjects: 2.576600 ms  DeleteObjects: 0.022000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001098 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.017 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2394.
+Total: 1.998200 ms (FindLiveObjects: 0.191100 ms CreateObjectMapping: 0.074600 ms MarkObjects: 1.716000 ms  DeleteObjects: 0.015400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 573.360241 seconds.
+  path: Assets/Tekstury/Trap/trap2.png
+  artifactKey: Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap2.png using Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b2f38cee8cc83948f82acdb79228e34') in 0.072195 seconds
+  Import took 0.076974 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001146 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.234 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2399.
+Total: 2.395000 ms (FindLiveObjects: 0.240300 ms CreateObjectMapping: 0.100900 ms MarkObjects: 2.021100 ms  DeleteObjects: 0.031300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.177834 seconds.
+  path: Assets/Tekstury/Trap/trap2.png
+  artifactKey: Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap2.png using Guid(16b1bdb0e634a6e4298f5d61eadbf8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79f411a049c15455c9b5bee0deebdffa') in 0.062359 seconds
+  Import took 0.066603 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001232 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.221 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2404.
+Total: 1.988500 ms (FindLiveObjects: 0.224000 ms CreateObjectMapping: 0.173000 ms MarkObjects: 1.574000 ms  DeleteObjects: 0.016300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001113 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.27 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.223 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2408.
+Total: 2.023200 ms (FindLiveObjects: 0.210400 ms CreateObjectMapping: 0.081200 ms MarkObjects: 1.700500 ms  DeleteObjects: 0.029700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004111 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.509 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.5 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2412.
+Total: 3.133800 ms (FindLiveObjects: 0.219000 ms CreateObjectMapping: 0.127800 ms MarkObjects: 2.759300 ms  DeleteObjects: 0.025200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001093 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.401 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.5 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2416.
+Total: 1.916900 ms (FindLiveObjects: 0.200400 ms CreateObjectMapping: 0.131500 ms MarkObjects: 1.500000 ms  DeleteObjects: 0.083300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003910 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.474 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.4 MB.
+System memory in use after: 90.5 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2420.
+Total: 1.883100 ms (FindLiveObjects: 0.206800 ms CreateObjectMapping: 0.117300 ms MarkObjects: 1.542600 ms  DeleteObjects: 0.014700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1161.623835 seconds.
+  path: Assets/Tekstury/TabPop/tab.png
+  artifactKey: Guid(7beb54ab63d7295408699ea6fe68140a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/TabPop/tab.png using Guid(7beb54ab63d7295408699ea6fe68140a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbfcaa754c142e0c319cbdfb9f489bee') in 0.073069 seconds
+  Import took 0.078844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.760918 seconds.
+  path: Assets/Tekstury/Other textures/asset.png
+  artifactKey: Guid(0b7d71830cc0ab546b8aee1ba47352c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Other textures/asset.png using Guid(0b7d71830cc0ab546b8aee1ba47352c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4c182ee9c7d9dc64040d815b0d98474') in 0.418820 seconds
+  Import took 0.423764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Tekstury/Other textures/background.png
+  artifactKey: Guid(8f934c9bc17d72745b40415709df04cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Other textures/background.png using Guid(8f934c9bc17d72745b40415709df04cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e019b67238c00b0bc313332f96ac436b') in 0.045325 seconds
+  Import took 0.050097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Tekstury/Other textures/lewy_rog_Gorny.asset
+  artifactKey: Guid(3fb349981bd736f4aaddcde05ddf2a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Other textures/lewy_rog_Gorny.asset using Guid(3fb349981bd736f4aaddcde05ddf2a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42a60c66939d69916b3e506add50f88') in 0.039177 seconds
+  Import took 0.043142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Tekstury/Other textures/klucz - animacja.png
+  artifactKey: Guid(711b7e274d3d8e84c8ec2baf3b2cbb3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Other textures/klucz - animacja.png using Guid(711b7e274d3d8e84c8ec2baf3b2cbb3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b16ef30c21a3883b03616479a26f89') in 0.028238 seconds
+  Import took 0.033708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Tekstury/Other textures/asset_18.asset
+  artifactKey: Guid(5ae8e0dcad3c61a49b44d5688e7870ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Other textures/asset_18.asset using Guid(5ae8e0dcad3c61a49b44d5688e7870ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05339eb00b54536e4739db1abd68e7d7') in 0.016195 seconds
+  Import took 0.021551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000973 seconds.
+  path: Assets/Tekstury/Other textures/asset_17.asset
+  artifactKey: Guid(b48dbb11b82aa574e8410954aec88aec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Other textures/asset_17.asset using Guid(b48dbb11b82aa574e8410954aec88aec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7358066da73d826843deaab36762a5d5') in 0.021394 seconds
+  Import took 0.031456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000518 seconds.
+  path: Assets/Tekstury/Other textures/asset_12.asset
+  artifactKey: Guid(82a1389bbd786074fb2f83c038ad8c95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Other textures/asset_12.asset using Guid(82a1389bbd786074fb2f83c038ad8c95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6755ecf7d0184febd2c164ac18cf8082') in 0.017789 seconds
+  Import took 0.026657 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001188 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.256 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2431.
+Total: 2.458300 ms (FindLiveObjects: 0.220700 ms CreateObjectMapping: 0.090800 ms MarkObjects: 2.127400 ms  DeleteObjects: 0.017500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004504 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.394 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2435.
+Total: 4.306300 ms (FindLiveObjects: 0.213500 ms CreateObjectMapping: 0.126600 ms MarkObjects: 3.946200 ms  DeleteObjects: 0.018500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001101 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.076 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2439.
+Total: 2.171700 ms (FindLiveObjects: 0.226400 ms CreateObjectMapping: 0.081800 ms MarkObjects: 1.841200 ms  DeleteObjects: 0.020300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002350 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.761 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2443.
+Total: 5.548300 ms (FindLiveObjects: 0.244600 ms CreateObjectMapping: 0.074500 ms MarkObjects: 5.207700 ms  DeleteObjects: 0.019800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1201.523787 seconds.
+  path: Assets/Tekstury/Trap/trap3.png
+  artifactKey: Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap3.png using Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2fb31f2d84a49df98265bd2ed654f1') in 3.748635 seconds
+  Import took 3.878330 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003773 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.818 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2448.
+Total: 2.179200 ms (FindLiveObjects: 0.252100 ms CreateObjectMapping: 0.091900 ms MarkObjects: 1.816100 ms  DeleteObjects: 0.017600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.906218 seconds.
+  path: Assets/Tekstury/Trap/trap3.png
+  artifactKey: Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap3.png using Guid(73ff2434ebf26b54c8dbe2c20d34d0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '892a583966b5501c2c162d4e19f8e531') in 5.684007 seconds
+  Import took 5.696335 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003121 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.318 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2453.
+Total: 3.252100 ms (FindLiveObjects: 0.515600 ms CreateObjectMapping: 0.109400 ms MarkObjects: 2.607200 ms  DeleteObjects: 0.017700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001554 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.752 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2457.
+Total: 2.774300 ms (FindLiveObjects: 0.412800 ms CreateObjectMapping: 0.158300 ms MarkObjects: 2.185700 ms  DeleteObjects: 0.016000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.063680 seconds.
+  path: Assets/Tekstury/Trap/trap 1 1.prefab
+  artifactKey: Guid(5b62db74061c58e43ad00576fd9fbd92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Trap/trap 1 1.prefab using Guid(5b62db74061c58e43ad00576fd9fbd92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c22fd359c7dcef34683c00a516b7d1ac') in 0.086477 seconds
+  Import took 0.090453 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003073 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.609 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2462.
+Total: 2.619900 ms (FindLiveObjects: 0.205700 ms CreateObjectMapping: 0.078500 ms MarkObjects: 2.313100 ms  DeleteObjects: 0.020800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001377 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.387 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2466.
+Total: 8.612400 ms (FindLiveObjects: 0.220100 ms CreateObjectMapping: 0.088000 ms MarkObjects: 8.277100 ms  DeleteObjects: 0.025000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006494 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.171 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2470.
+Total: 71.081100 ms (FindLiveObjects: 0.265100 ms CreateObjectMapping: 1.686500 ms MarkObjects: 69.109500 ms  DeleteObjects: 0.018200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002713 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.912 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2474.
+Total: 3.361000 ms (FindLiveObjects: 0.370400 ms CreateObjectMapping: 0.139200 ms MarkObjects: 2.218500 ms  DeleteObjects: 0.630600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009924 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.411 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2478.
+Total: 3.391500 ms (FindLiveObjects: 0.389100 ms CreateObjectMapping: 0.116900 ms MarkObjects: 2.867900 ms  DeleteObjects: 0.016100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001264 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.327 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2482.
+Total: 2.330700 ms (FindLiveObjects: 0.226400 ms CreateObjectMapping: 0.092600 ms MarkObjects: 1.989000 ms  DeleteObjects: 0.020900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001403 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.403 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2486.
+Total: 2.675500 ms (FindLiveObjects: 0.214200 ms CreateObjectMapping: 0.204100 ms MarkObjects: 2.238900 ms  DeleteObjects: 0.017100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001192 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.932 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2490.
+Total: 2.324300 ms (FindLiveObjects: 0.421500 ms CreateObjectMapping: 0.153200 ms MarkObjects: 1.732500 ms  DeleteObjects: 0.016000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 692.429840 seconds.
+  path: Assets/Scenes/shopScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/shopScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37fc0e3517ffaf532fe7c10cadf12446') in 0.053685 seconds
+  Import took 0.067037 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002605 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.646 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2494.
+Total: 2.424400 ms (FindLiveObjects: 0.205700 ms CreateObjectMapping: 0.093000 ms MarkObjects: 2.106400 ms  DeleteObjects: 0.018000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.254527 seconds.
+  path: Assets/Tekstury/Chest Texture/chest.png
+  artifactKey: Guid(7a5be0f367e6e1c458548cc3d6dad298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Chest Texture/chest.png using Guid(7a5be0f367e6e1c458548cc3d6dad298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37e85edf9a4461d568d1da2a122ff4b3') in 0.124857 seconds
+  Import took 0.128895 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.272805 seconds.
+  path: Assets/Tekstury/Door Texture/door--animation - drzwi podzielone1 1.png
+  artifactKey: Guid(89cefde1b2a8b344584669445b7ed8ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/door--animation - drzwi podzielone1 1.png using Guid(89cefde1b2a8b344584669445b7ed8ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2572f6505c255b4f5742bbb89a37e415') in 0.054770 seconds
+  Import took 0.059270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Tekstury/Door Texture/door--animation - drzwi podzielone2 1.png
+  artifactKey: Guid(78830caeeacf7fb45b54140bb171b982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/door--animation - drzwi podzielone2 1.png using Guid(78830caeeacf7fb45b54140bb171b982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7927094a53d2643d489935b2dfba57d') in 0.102033 seconds
+  Import took 0.105930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Tekstury/Door Texture/góra_Drzwi.png
+  artifactKey: Guid(47f4b0c5e5cc9e84f8f6d50c23fbe615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/góra_Drzwi.png using Guid(47f4b0c5e5cc9e84f8f6d50c23fbe615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80fbe230caa0942eae34210bdb86311f') in 0.035827 seconds
+  Import took 0.039873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Tekstury/Door Texture/Gora drzwi.png
+  artifactKey: Guid(6cff6fecd171a574694b108e3b308c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/Gora drzwi.png using Guid(6cff6fecd171a574694b108e3b308c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '371519d13a5903972139c4e88a903c39') in 0.037692 seconds
+  Import took 0.041865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/Tekstury/Door Texture/door--animation - drzwi podzielone2.png
+  artifactKey: Guid(d84152bbca104e84f9a54b5a9531a4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/door--animation - drzwi podzielone2.png using Guid(d84152bbca104e84f9a54b5a9531a4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98ae99391c35bc8bac57e280dea9b576') in 0.051737 seconds
+  Import took 0.055635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Tekstury/Door Texture/door--animation 1.png
+  artifactKey: Guid(e5c61e644039d9148aff3775c409ae13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/door--animation 1.png using Guid(e5c61e644039d9148aff3775c409ae13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c44f864186aceeba40e403a6f1dafdd5') in 0.072956 seconds
+  Import took 0.076670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Tekstury/Door Texture/poprawiona_ostatnia_klatka_drzwi.png
+  artifactKey: Guid(1aa1c2bc7102bb54cb7192ab3b34451b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/poprawiona_ostatnia_klatka_drzwi.png using Guid(1aa1c2bc7102bb54cb7192ab3b34451b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e37834371e787809a2b5b7ed7529fb4') in 0.026264 seconds
+  Import took 0.031929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Tekstury/Door Texture/door--animation - drzwi podzielone1.png
+  artifactKey: Guid(ebebb5db95042da43899ae5624c3c771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/door--animation - drzwi podzielone1.png using Guid(ebebb5db95042da43899ae5624c3c771) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17c48e32446b041ca082ccabacd09dc') in 0.045236 seconds
+  Import took 0.049001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Tekstury/Door Texture/door--animation.png
+  artifactKey: Guid(3888143159006cb47b8ec855f53da9c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Door Texture/door--animation.png using Guid(3888143159006cb47b8ec855f53da9c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86804b9adfaeda228ae1dd0c52f90dea') in 0.058046 seconds
+  Import took 0.062077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.010995 seconds.
+  path: Assets/Tekstury/Floor Texture/floor1.asset
+  artifactKey: Guid(6eb2583f8f7046243b601fd27b739e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Floor Texture/floor1.asset using Guid(6eb2583f8f7046243b601fd27b739e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54990185d73a711ac5105adc09c979a6') in 0.022398 seconds
+  Import took 0.030721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/Tekstury/Floor Texture/floor2.png
+  artifactKey: Guid(8d9e595515356ca48aa68cbd5160b547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Floor Texture/floor2.png using Guid(8d9e595515356ca48aa68cbd5160b547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c682b4b9c9938d05a291e1e4e285415') in 0.031958 seconds
+  Import took 0.040621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Tekstury/Floor Texture/floor1.asset
+  artifactKey: Guid(6eb2583f8f7046243b601fd27b739e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Floor Texture/floor1.asset using Guid(6eb2583f8f7046243b601fd27b739e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54990185d73a711ac5105adc09c979a6') in 0.012757 seconds
+  Import took 0.018239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000812 seconds.
+  path: Assets/Tekstury/Floor Texture/floor1.png
+  artifactKey: Guid(bd7ced928f03dba428e358555cd9838e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Floor Texture/floor1.png using Guid(bd7ced928f03dba428e358555cd9838e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a0bbaaa11a8aed7ca8852bf78fd26d') in 0.024926 seconds
+  Import took 0.028728 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Tekstury/Floor Texture/podloga.prefab
+  artifactKey: Guid(c3f2a824d19da2547b097a314135e3f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Floor Texture/podloga.prefab using Guid(c3f2a824d19da2547b097a314135e3f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62d7bcaaa0423aabe295389304d5f630') in 0.025422 seconds
+  Import took 0.029065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Tekstury/Floor Texture/floor2.asset
+  artifactKey: Guid(1518d10c9b1450f4cb70ea2139aeaaa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Floor Texture/floor2.asset using Guid(1518d10c9b1450f4cb70ea2139aeaaa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f21f3bd2c936b0bb8d2e55eeacfdd66') in 0.020798 seconds
+  Import took 0.025830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.571437 seconds.
+  path: Assets/Tekstury/FOG/GameObject.prefab
+  artifactKey: Guid(f472cb6cc4b89134eb598c83c459f212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/FOG/GameObject.prefab using Guid(f472cb6cc4b89134eb598c83c459f212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f22cb7102dbdf0b22cdf7ebfb7495c') in 0.041044 seconds
+  Import took 0.045330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.963589 seconds.
+  path: Assets/Tekstury/Minotaur Textures/MinoTurns.prefab
+  artifactKey: Guid(a2f78affcb061fe458fa72b36d1e5feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tekstury/Minotaur Textures/MinoTurns.prefab using Guid(a2f78affcb061fe458fa72b36d1e5feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f534c41b1fdf67c2279bf2dfdb54b87a') in 0.027409 seconds
+  Import took 0.033427 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001140 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.742 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 91.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2513.
+Total: 2.286800 ms (FindLiveObjects: 0.233300 ms CreateObjectMapping: 0.089600 ms MarkObjects: 1.946600 ms  DeleteObjects: 0.015800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001146 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.822 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 91.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2517.
+Total: 1.911100 ms (FindLiveObjects: 0.206500 ms CreateObjectMapping: 0.074800 ms MarkObjects: 1.612100 ms  DeleteObjects: 0.016600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001330 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.774 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 1.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 91.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2521.
+Total: 2.651500 ms (FindLiveObjects: 0.284100 ms CreateObjectMapping: 0.158400 ms MarkObjects: 2.171200 ms  DeleteObjects: 0.015400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001835 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.226 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 2.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 91.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2525.
+Total: 8.490600 ms (FindLiveObjects: 0.232100 ms CreateObjectMapping: 0.082300 ms MarkObjects: 8.154800 ms  DeleteObjects: 0.019800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001288 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.595 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 91.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2529.
+Total: 1.991700 ms (FindLiveObjects: 0.234300 ms CreateObjectMapping: 0.088900 ms MarkObjects: 1.649400 ms  DeleteObjects: 0.017500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001306 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.563 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2533.
+Total: 1.899800 ms (FindLiveObjects: 0.217600 ms CreateObjectMapping: 0.082300 ms MarkObjects: 1.580100 ms  DeleteObjects: 0.018500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001184 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.609 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2537.
+Total: 2.415200 ms (FindLiveObjects: 0.204300 ms CreateObjectMapping: 0.070400 ms MarkObjects: 2.121600 ms  DeleteObjects: 0.016900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001032 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.631 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 1.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2541.
+Total: 2.774700 ms (FindLiveObjects: 0.412900 ms CreateObjectMapping: 0.228700 ms MarkObjects: 2.111700 ms  DeleteObjects: 0.019600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004288 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.645 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2545.
+Total: 2.483000 ms (FindLiveObjects: 0.307700 ms CreateObjectMapping: 0.086600 ms MarkObjects: 2.043300 ms  DeleteObjects: 0.044000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001414 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.205 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2549.
+Total: 3.007000 ms (FindLiveObjects: 0.954800 ms CreateObjectMapping: 0.136800 ms MarkObjects: 1.894500 ms  DeleteObjects: 0.019300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001262 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.573 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2553.
+Total: 2.183800 ms (FindLiveObjects: 0.233300 ms CreateObjectMapping: 0.088900 ms MarkObjects: 1.800300 ms  DeleteObjects: 0.059400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.019131 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.284 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2557.
+Total: 6.728500 ms (FindLiveObjects: 0.241300 ms CreateObjectMapping: 0.190400 ms MarkObjects: 6.273500 ms  DeleteObjects: 0.021500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 687.923369 seconds.
+  path: Assets/Scenes/Game.unity
+  artifactKey: Guid(6a251b8303a09894e9adea948cdcc4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game.unity using Guid(6a251b8303a09894e9adea948cdcc4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c3a9a1659882cec84619ebeb15407f6') in 0.222487 seconds
+  Import took 0.226934 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001176 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in 19.816 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 2.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2561.
+Total: 8.646400 ms (FindLiveObjects: 0.247800 ms CreateObjectMapping: 0.101200 ms MarkObjects: 8.278000 ms  DeleteObjects: 0.017600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002231 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.430 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2565.
+Total: 4.225000 ms (FindLiveObjects: 0.220900 ms CreateObjectMapping: 0.093400 ms MarkObjects: 3.884600 ms  DeleteObjects: 0.024100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022362 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.937 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2569.
+Total: 2.295300 ms (FindLiveObjects: 0.244400 ms CreateObjectMapping: 0.100700 ms MarkObjects: 1.929300 ms  DeleteObjects: 0.019300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001408 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.706 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.2 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2573.
+Total: 5.724600 ms (FindLiveObjects: 0.237700 ms CreateObjectMapping: 0.097100 ms MarkObjects: 5.366200 ms  DeleteObjects: 0.022000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003854 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.719 seconds
+Platform modules already initialized, skipping
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Shader Hidden/NewImageEffectShader uses undefined Queue: 'Transparent + 1'
+
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.2 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2577.
+Total: 2.687300 ms (FindLiveObjects: 0.406500 ms CreateObjectMapping: 0.155700 ms MarkObjects: 2.106700 ms  DeleteObjects: 0.017000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

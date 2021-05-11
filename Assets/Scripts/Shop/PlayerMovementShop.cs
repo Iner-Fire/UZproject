@@ -51,11 +51,6 @@ public class PlayerMovementShop : MonoBehaviour
 			torches = PlayerPrefs.GetInt("torchAmount");
 
 			trap = PlayerPrefs.GetInt("trapAmount");
-
-			potions = PlayerPrefs.GetInt("potionAmount");
-			this.transform.position = new Vector3(PlayerPrefs.GetFloat("playerPosistionX"),
-			PlayerPrefs.GetFloat("playerPosistionY"),
-			PlayerPrefs.GetFloat("playerPosistionZ"));
 		}	
 	}
 	void Start()

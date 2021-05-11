@@ -7,6 +7,7 @@ public class TorchScript : MonoBehaviour
     public GameObject torch;
     public GameObject trapPrefab;
     public playerMovement counter;
+    public HealthBar health;
     public Animator torchAnim;
     public Animator trap;
     public Animator potion;
@@ -24,6 +25,9 @@ public class TorchScript : MonoBehaviour
     {
         
         playerMovement counterTorches = counter.GetComponent<playerMovement>();
+        HealthBar healthSet = health.GetComponent<HealthBar>();
+        playerPosition = GameObject.FindGameObjectWithTag("Player");
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var input = Input.inputString;
         switch (input)
         {
@@ -121,7 +125,9 @@ public class TorchScript : MonoBehaviour
 
                 break;
         }
-        if (Input.GetButtonDown("Fire1") && counterTorches.torches >=1 && whichKey == 1)
+        if (Input.GetButtonDown("Fire1") && counterTorches.torches >=1 && whichKey == 1 &&  
+            Mathf.Abs(playerPosition.transform.position.x - mousePosition.x) < 1 && 
+            Mathf.Abs(playerPosition.transform.position.y - mousePosition.y) < 1)
         {
            
             counterTorches.torches -= 1;
@@ -137,15 +143,17 @@ public class TorchScript : MonoBehaviour
             {
                 counterTorches.trap -= 1;
                 playerPosition = GameObject.FindGameObjectWithTag("Player");
-                Instantiate(trapPrefab, new Vector3(playerPosition.transform.position.x, playerPosition.transform.position.y - (float)0.3, 0), Quaternion.identity);
+                Instantiate(trapPrefab, new Vector3(playerPosition.transform.position.x, playerPosition.transform.position.y - (float)0.18, 0), Quaternion.identity);
 
             }
         }
 
-        if (Input.GetButtonDown("Fire1") && counterTorches.potions >= 1 && whichKey == 3)
+        if (counterTorches.potions >= 1 && whichKey == 3)
         {
 
             counterTorches.potions -= 1;
+            counterTorches.currentHealth += 1;
+            healthSet.SetHP(counterTorches.currentHealth);
 
 
         }

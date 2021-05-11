@@ -42,7 +42,7 @@ public class playerMovement : MonoBehaviour
 
     void Awake()
     {
-		respawn.Spawn();
+		
 		if (PlayerPrefs.GetInt("saveData") == 1)
 		{
 				deathCounter = PlayerPrefs.GetInt("deathCounter");
@@ -76,7 +76,6 @@ public class playerMovement : MonoBehaviour
             {
 				Destroy(GameObject.FindGameObjectWithTag("FOGM"));
 				PlayerPrefs.SetInt("respawn", 0);
-				PlayerPrefs.Save();
             }
 			else
 				DontDestroyOnLoad(FOGM);
@@ -91,7 +90,7 @@ public class playerMovement : MonoBehaviour
 	}
     void Start()
 	{
-		
+		respawn.Spawn();
 		currentHealth = maxHealth;
 		healthBar.SetMaxHP(maxHealth);
 		rigibody = GetComponent<Rigidbody2D>();
@@ -210,7 +209,9 @@ public class playerMovement : MonoBehaviour
 	}
     private void OnTriggerExit2D(Collider2D collision)
     {
-		szop.SetTrigger("close");
+		if (collision.gameObject.CompareTag("desk"))
+			szop.SetTrigger("close");
+
 		if (collision.gameObject.CompareTag("Glue"))
 		{
 			moveSpeed *= 3;
