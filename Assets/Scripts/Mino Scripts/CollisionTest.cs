@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
@@ -10,24 +10,49 @@ public class CollisionTest : MonoBehaviour
     public float moveForce = 0f;
     private Rigidbody2D rbody;
     public Vector3 moveDir;
+    public Vector3 lastDir;
+    public Vector3 temp;
+    public Vector3 DefinitionRight;
+    public Vector3 DefinitionLeft;
+    public Vector3 DefinitionUp;
+    public Vector3 DefinitionDown;
+    public int ChanceForBacktrack = 0; //Im wieksze, tym mniejsze prawdopodobienstwo
     private Stopwatch stopWatch = new Stopwatch();
+    public Vector3 targetposition;
 
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
+        DefinitionRight = new Vector3(1, 0, 0);
+        DefinitionLeft = new Vector3(-1, 0, 0);
+        DefinitionUp = new Vector3(0, 1, 0);
+        DefinitionDown = new Vector3(0, -1, 0);
         int[] flag = new int[4];
         for (int i = 0; i < 4; i++) flag[i] = 0;
-        moveDir = ChooseDirection(flag);
+        moveDir = ChooseDirection(flag); //Wybierz kierunek ruchu na początku zależnie od punktu w którym się znajduje, musi być w punkcie kolizji
     }
     void Update()
     {
-        rbody.MovePosition(transform.position + moveDir * moveForce);
+        targetposition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        if (targetposition.y > transform.position.y - 0.25 && targetposition.y < transform.position.y + 0.25)
+        {
+
+        }
+        else if (targetposition.x > transform.position.x - 0.25 && targetposition.x < transform.position.x + 0.25)
+        {
+
+        }
+        else
+        {
+
+        }
+        rbody.MovePosition(transform.position + moveDir * moveForce); //Przemieszczenie minotaura co update
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
         int[] flag = new int[4];
         for (int i = 0; i < 4; i++) flag[i] = 0;
-        if (col.gameObject.name == "Mino_GoRight")
+        if (col.gameObject.name == "Mino_GoRight") // Analiza dozwolonych tras, wpisywanie w tabelke jedynek dla wektorów dozwolonych
         {
             flag[0] = 1;
         }
@@ -96,46 +121,54 @@ public class CollisionTest : MonoBehaviour
         }
         IEnumerator czekaj()
         {
-            UnityEngine.Debug.Log("czekam");
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.05f); //Kolizja ma zachodzić po małym odstępie czasu, by minotaur zdążył dojść do środka zakrętu, by wtedy skręcić
             moveDir = ChooseDirection(flag);
         }
-        /*new Task(() =>
-        {
-            UnityEngine.Debug.Log("Penis");
-            moveDir = ChooseDirection(flag);
-        })
-            .Start();*/
-        /* Dispatcher.Invoke(() =>
-         {
-             for (var i = 0; i < 5; i++)
-             {
-                 UnityEngine.Debug.Log($"Penisek #{i}");
-                 Thread.Sleep(1000);
-             }
-         });*/
         StartCoroutine(czekaj());
-        
+
     }
     Vector3 ChooseDirection(int[] flagDir)
     {
         System.Random rand = new System.Random();
         Vector3 temp = new Vector3();
-        int count=0;
+        int count = 0;
+
         for (int k = 0; k < 4; k++) if (flagDir[k] == 1)
             {
-                count++;
+                count++; //Zlicz wszystkie działające trasy
             }
-        for (int k = 0; k < count; k++)
+        int roll = rand.Next(0, count * ChanceForBacktrack);
+        UnityEngine.Debug.Log(roll);
+        if (roll == 0)
         {
-            if (rand.Next(0, count) == 0)
+            temp = -moveDir;
+        }
+        else
+        {
+            if (moveDir.Equals(DefinitionRight)) //Usun mozliwosc powrotu
+            {
+                flagDir[1] = 0;
+            }
+            if (moveDir.Equals(DefinitionLeft))
+            {
+                flagDir[0] = 0;
+            }
+            if (moveDir.Equals(DefinitionUp))
+            {
+                flagDir[3] = 0;
+            }
+            if (moveDir.Equals(DefinitionDown))
+            {
+                flagDir[2] = 0;
+            }
+            if (roll > 0 && roll <= ChanceForBacktrack)
             {
                 if (flagDir[0] == 1) temp = transform.right;
                 else if (flagDir[1] == 1) temp = -transform.right;
                 else if (flagDir[2] == 1) temp = transform.up;
                 else temp = -transform.up;
             }
-            else if (rand.Next(0, count - 1) == 0)
+            else if (roll > ChanceForBacktrack && roll <= 2 * ChanceForBacktrack)
             {
                 if (flagDir[0] == 1)
                 {
@@ -150,7 +183,7 @@ public class CollisionTest : MonoBehaviour
                 }
                 else temp = -transform.up;
             }
-            else if (rand.Next(0, count - 2) == 0)
+            else if (roll > 2 * ChanceForBacktrack && roll <= 3 * ChanceForBacktrack)
             {
                 if (flagDir[0] == 1 && flagDir[1] == 1 && flagDir[2] == 1)
                 {
@@ -160,6 +193,7 @@ public class CollisionTest : MonoBehaviour
             }
             else temp = -transform.up;
         }
+        UnityEngine.Debug.Log("Ide w " + temp);
         return temp;
     }
 }
