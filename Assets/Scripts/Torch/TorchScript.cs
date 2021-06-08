@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TorchScript : MonoBehaviour
 {
+    
     public GameObject torch;
     public GameObject trapPrefab;
     public playerMovement counter;
@@ -11,8 +12,10 @@ public class TorchScript : MonoBehaviour
     public Animator torchAnim;
     public Animator trap;
     public Animator potion;
-    private int whichKey;
+    public SpriteChange which;
+    public int whichKey;
     private GameObject playerPosition;
+    public openChest chest;
     bool torchb = false;
     bool torchnb = false;
     bool potionb = false;
@@ -148,15 +151,35 @@ public class TorchScript : MonoBehaviour
             }
         }
 
-        if (counterTorches.potions >= 1 && whichKey == 3)
+        if (chest.isChanged == 0)
         {
+            if (counterTorches.potions >= 1 && whichKey == 3)
+            {
 
-            counterTorches.potions -= 1;
-            counterTorches.currentHealth += 1;
-            healthSet.SetHP(counterTorches.currentHealth);
+                counterTorches.potions -= 1;
+                counterTorches.currentHealth += 1;
+                healthSet.SetHP(counterTorches.currentHealth);
 
 
+            }
         }
+        else if(chest.isChanged == 1 && which.whichOne == 0)
+        {
+            if (counterTorches.potion_mvspeed >= 1 && whichKey == 3)
+            {
+                Debug.Log("potka speed");
+                counterTorches.potion_mvspeed -= 1;
+                counter.moveSpeed += (float)0.5;
+                StartCoroutine(endPotion(5));
 
+
+            }
+        }
+     IEnumerator endPotion(int secs)
+        {
+            yield return new WaitForSeconds(secs);
+            counter.moveSpeed -= (float)0.5;
+        }
+        
     }
 }

@@ -23,6 +23,12 @@ TagManager:
   - FOGM
   - FOGS
   - FOGC
+  - Mino_GoLeft
+  - Mino_GoRight
+  - Spikes
+  - Mino
+  - Gold
+  - Music
   layers:
   - Default
   - TransparentFX

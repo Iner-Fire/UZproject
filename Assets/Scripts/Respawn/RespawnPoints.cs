@@ -13,7 +13,6 @@ public class RespawnPoints : MonoBehaviour
     public GameObject spawn6;
     private GameObject playerPosition;
 
-    // Update is called once per frame
     public void Spawn()
     {
         playerPosition = GameObject.FindGameObjectWithTag("Player");

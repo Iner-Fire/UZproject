@@ -31,8 +31,8 @@ public class SpeedrunTime : MonoBehaviour
         seconds = Timer % 60;
         minutes = ((int)Timer / 60);
         hours = (int)Timer / 3600;
-        timer.text = "Time: " + hours + ":" + minutes.ToString() + ":" + seconds.ToString("F2");
-        death.text = "Death counter: " + deahtCounter.deathCounter.ToString();
+        timer.text = hours + ":" + minutes.ToString() + ":" + seconds.ToString("F2");
+        death.text = deahtCounter.deathCounter.ToString();
 
     }
 
