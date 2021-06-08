@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
+	public Gold gold;
+	public KeySpawn keyspawn;
+	public SpriteChange which;
+	bool isMoving = false;
 	public int deathCounter = 0;
 	public int maxHealth = 3;
 	public int currentHealth;
@@ -15,19 +19,26 @@ public class playerMovement : MonoBehaviour
 	public Animator anim;
 	public float hf = 0.0f;
 	public float speed = 0.0f;
-	public AudioClip clip;
+	public static AudioClip clip;
+	AudioSource audioSrc;
 	public keyPickup key;
 	public Animator szop;
+	public Animator Spikes;
 	public SpeedrunTime time;
+	public SpikesSpawn spikeSpawn;
+	public SoundManagerScript sound;
 	public int potions;
 	public int trap;
 	public int coins;
 	public int torches;
+	public int potion_mvspeed;
+	public int potion_invisible;
 	public int isChangdTimer = 0;
 	int saveData = 0;
 	public  GameObject FOGM;
 	public GameObject torch;
 	public int keyAmount;
+	public openChest chest;
 	public HealthBar healthBar;
 	public Text textCounterTrap;
 	public Text textCounterCoins;
@@ -45,6 +56,10 @@ public class playerMovement : MonoBehaviour
     void Awake()
     {
 		
+		if(PlayerPrefs.GetInt("death") == 1)
+        {
+			deathCounter = PlayerPrefs.GetInt("deathCounter");
+		}
 		if (PlayerPrefs.GetInt("saveData") == 1)
 		{
 				deathCounter = PlayerPrefs.GetInt("deathCounter");
@@ -92,6 +107,10 @@ public class playerMovement : MonoBehaviour
 	}
     void Start()
 	{
+		keyspawn.SetKeySpawn();
+		gold.GoldSpawn();
+		audioSrc = GetComponent<AudioSource>();
+		spikeSpawn.Spawn();
 		respawn.Spawn();
 		currentHealth = maxHealth;
 		healthBar.SetMaxHP(maxHealth);
@@ -100,17 +119,24 @@ public class playerMovement : MonoBehaviour
 		FOGMC = GetComponent<Camera>();
 		FOGSC = GetComponent<Camera>();
 
+
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		
+	
 		TorchScript saveDataTorch = saveTorch.GetComponent<TorchScript>();
 		SpeedrunTime timer = time.GetComponent<SpeedrunTime>();
 		keyPickup keyCounter = key.GetComponent<keyPickup>();
 		textCounterCoins.text = coins.ToString();
-		textCounterPotion.text = potions.ToString();
+		if (chest.isChanged == 0)
+			textCounterPotion.text = potions.ToString();
+		else if (chest.isChanged == 1)
+			textCounterPotion.text = potion_mvspeed.ToString();
+		else if (chest.isChanged == 1 && which.whichOne == 1)
+			textCounterPotion.text = potion_invisible.ToString();
 		textCounterTrap.text = trap.ToString();
 		textCounterTorch.text = torches.ToString();
 		textCounterKeys.text = keyCounter.key.ToString();
@@ -129,14 +155,22 @@ public class playerMovement : MonoBehaviour
 			this.gameObject.transform.localScale = new Vector3(1, 1, 1);
 
 		}
-		/*if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Verical") <= 0.01f || Input.GetAxis("Horizontal") <= 0.01f)
-        {
-			source.Play();
-        }
-        else if(Input.GetAxis("Verical") ==0 || Input.GetAxis("Horizontal") == 0)
-        {
-			source.Stop();
-        }*/
+	
+
+			if (rigibody.velocity.x != 0)
+				isMoving = true;
+			else
+				isMoving = false;
+			if (isMoving)
+			{
+				if (!audioSrc.isPlaying)
+					audioSrc.Play();
+			}
+			else
+				audioSrc.Stop();
+
+
+
 
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
@@ -157,6 +191,7 @@ public class playerMovement : MonoBehaviour
 			PlayerPrefs.SetFloat("timer_m", timer.minutes);
 			PlayerPrefs.SetFloat("timer_s", timer.seconds);
 			PlayerPrefs.SetFloat("start", timer.start);
+			PlayerPrefs.SetInt("deathCounter", deathCounter);
 			isChangdTimer = 1;
 			PlayerPrefs.SetInt("isChangedTimer", isChangdTimer);
 
@@ -166,6 +201,8 @@ public class playerMovement : MonoBehaviour
 			PlayerPrefs.SetInt("torchAmount", torches);
 			PlayerPrefs.SetInt("potionAmount", potions);
 			PlayerPrefs.SetInt("trapAmount", trap);
+			PlayerPrefs.SetInt("potion_mvspeedAmount", potion_mvspeed);
+			PlayerPrefs.SetInt("potion_invisible", potion_invisible);
 			saveData = 1;
 			PlayerPrefs.SetInt("saveData", saveData);
 			PlayerPrefs.Save();
@@ -196,22 +233,8 @@ public class playerMovement : MonoBehaviour
 		if(collision.gameObject.CompareTag("Glue"))
         {
 			moveSpeed /= 3;
-			currentHealth -= 1;
-			if (currentHealth == 0)
-			{
-				deathCounter++;
-				PlayerPrefs.SetInt("deathCounter", deathCounter);
-				Respawn = 1;
-				PlayerPrefs.SetInt("respawn", Respawn);
-				SceneManager.LoadScene("Game");
-	
-
-
-			}
-				
-			
-			healthBar.SetHP(currentHealth);
         }
+		
 	}
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -222,6 +245,8 @@ public class playerMovement : MonoBehaviour
 		{
 			moveSpeed *= 3;
 		}
+		
 	}
+
 }
 

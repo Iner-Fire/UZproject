@@ -9,4 +9,8 @@ public class LoadNextScene : MonoBehaviour
     {
         SceneManager.LoadScene("Start");
     }
+    public void NextSceneInto()
+    {
+        SceneManager.LoadScene("IntroCreatedBy");
+    }
 }

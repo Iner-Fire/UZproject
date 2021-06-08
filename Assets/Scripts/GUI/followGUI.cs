@@ -10,6 +10,7 @@ public class followGUI : MonoBehaviour
     public GameObject EQtrap;
     public GameObject EQpotion;
     public GameObject healthBar;
+    public GameObject SpeedrunPop;
     void Update()
     {
         /* if (SceneManager.GetActiveScene().buildIndex == 2)
@@ -32,6 +33,7 @@ public class followGUI : MonoBehaviour
             EQtorch.transform.position = new Vector2(leftBottom.x + (float)0.88, leftBottom.y + (float)0.95);
             EQtrap.transform.position = new Vector2(leftBottom.x + (float)+2.98, leftBottom.y + (float)0.95);
             EQpotion.transform.position = new Vector2(leftBottom.x + (float)+5.08, leftBottom.y + (float)0.95);
+            SpeedrunPop.transform.position = new Vector2(leftTop.x + (float)20.95, (leftTop.y - (float)2.25));
         }
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
@@ -42,6 +44,7 @@ public class followGUI : MonoBehaviour
             EQtorch.transform.position = new Vector2(leftBottom.x + (float)0.7, leftBottom.y + (float)0.9);
             EQtrap.transform.position = new Vector2(leftBottom.x + (float)+2.8, leftBottom.y + (float)0.9);
             EQpotion.transform.position = new Vector2(leftBottom.x + (float)+4.9, leftBottom.y + (float)0.9);
+            SpeedrunPop.transform.position = new Vector2(leftTop.x + (float)19.95, (leftTop.y - (float)9.25));
         }
     }
 }
