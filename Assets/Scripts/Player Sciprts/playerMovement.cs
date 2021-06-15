@@ -9,6 +9,9 @@ public class playerMovement : MonoBehaviour
 	public Gold gold;
 	public KeySpawn keyspawn;
 	public SpriteChange which;
+	public Sprite potion_mv;
+	public Sprite potion_in;
+	public SpriteRenderer spriteRnd;
 	bool isMoving = false;
 	public int deathCounter = 0;
 	public int maxHealth = 3;
@@ -55,7 +58,14 @@ public class playerMovement : MonoBehaviour
 
     void Awake()
     {
-		
+        if (PlayerPrefs.GetInt("whichOne") == 1 && PlayerPrefs.GetInt("isChanged") == 1) 
+        {
+			spriteRnd.sprite = potion_in;
+        }
+        else if (PlayerPrefs.GetInt("whichOne") == 0 && PlayerPrefs.GetInt("isChanged") == 1)
+        {
+			spriteRnd.sprite = potion_mv;
+        }
 		if(PlayerPrefs.GetInt("death") == 1)
         {
 			deathCounter = PlayerPrefs.GetInt("deathCounter");
@@ -71,24 +81,34 @@ public class playerMovement : MonoBehaviour
 				trap = PlayerPrefs.GetInt("trapAmount");
 			
 				potions = PlayerPrefs.GetInt("potionAmount");
-			/*if (PlayerPrefs.GetInt("respawn") == 1)
-				respawn.Spawn();*/
+
+				potion_invisible = PlayerPrefs.GetInt("potion_inv_amount");
+
+				potion_mvspeed = PlayerPrefs.GetInt("potion_mvspeed_amount");
+
+				key.key = PlayerPrefs.GetInt("keyAmount");
+
+
+
+
+		}
+		Scene currentScene1 = SceneManager.GetActiveScene();
+		string sceneName1 = currentScene1.name;
+		int done = 0;
+		if(sceneName1 =="Maze1" && done == 0)
+        {
+			PlayerPrefs.DeleteKey("playerPosistionX");
+			PlayerPrefs.GetFloat("playerPosistionY");
+			PlayerPrefs.GetFloat("playerPosistionZ");
+			done = 1;
+		}
+		
 			
-		}
-		if (PlayerPrefs.GetInt("respawn") == 0)
-		{
-			this.transform.position = new Vector3(PlayerPrefs.GetFloat("playerPosistionX"),
-			PlayerPrefs.GetFloat("playerPosistionY"),
-			PlayerPrefs.GetFloat("playerPosistionZ"));
-		}
-		/*else if (PlayerPrefs.GetInt("respawn") == 1)
-			respawn.Spawn();
-*/
 		Scene currentScene = SceneManager.GetActiveScene();
 		string sceneName = currentScene.name;
-		if (sceneName == "Game")
+		/*if (sceneName == "Game" || sceneName == "Maze1" || sceneName == "Maze2")
 		{
-			DontDestroyOnLoad(FOGM);
+			
 			if(PlayerPrefs.GetInt("respawn") == 1)
             {
 				Destroy(GameObject.FindGameObjectWithTag("FOGM"));
@@ -103,7 +123,7 @@ public class playerMovement : MonoBehaviour
 				PlayerPrefs.GetFloat("Torchz" + i)), Quaternion.identity);
 			}
 			
-		}
+		}*/
 	}
     void Start()
 	{
@@ -122,7 +142,7 @@ public class playerMovement : MonoBehaviour
 
 	}
 
-	// Update is called once per frame
+
 	void Update()
 	{
 		
@@ -133,7 +153,7 @@ public class playerMovement : MonoBehaviour
 		textCounterCoins.text = coins.ToString();
 		if (chest.isChanged == 0)
 			textCounterPotion.text = potions.ToString();
-		else if (chest.isChanged == 1)
+		else if (chest.isChanged == 1 && which.whichOne == 0)
 			textCounterPotion.text = potion_mvspeed.ToString();
 		else if (chest.isChanged == 1 && which.whichOne == 1)
 			textCounterPotion.text = potion_invisible.ToString();
@@ -157,58 +177,6 @@ public class playerMovement : MonoBehaviour
 		}
 	
 
-			if (rigibody.velocity.x != 0)
-				isMoving = true;
-			else
-				isMoving = false;
-			if (isMoving)
-			{
-				if (!audioSrc.isPlaying)
-					audioSrc.Play();
-			}
-			else
-				audioSrc.Stop();
-
-
-
-
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			if (saveDataTorch.cloneList.Count > 0)
-			{
-				for (int i = 0; i < saveDataTorch.cloneList.Count; i++)
-				{
-					PlayerPrefs.SetFloat("Torchx" + i, saveDataTorch.cloneList[i].transform.position.x);
-					PlayerPrefs.SetFloat("Torchy" + i, saveDataTorch.cloneList[i].transform.position.y);
-					PlayerPrefs.SetFloat("Torchz" + i, saveDataTorch.cloneList[i].transform.position.z);
-					PlayerPrefs.SetFloat("CloneListCount", saveDataTorch.cloneList.Count);
-				}
-			}
-			PlayerPrefs.SetInt("CurrentScene",SceneManager.GetActiveScene().buildIndex);
-			PlayerPrefs.SetFloat("playerPosistionX", this.gameObject.transform.position.x);
-			PlayerPrefs.SetFloat("playerPosistionY", this.gameObject.transform.position.y);
-			PlayerPrefs.SetFloat("playerPosistionZ", this.gameObject.transform.position.z);
-			PlayerPrefs.SetFloat("timer_m", timer.minutes);
-			PlayerPrefs.SetFloat("timer_s", timer.seconds);
-			PlayerPrefs.SetFloat("start", timer.start);
-			PlayerPrefs.SetInt("deathCounter", deathCounter);
-			isChangdTimer = 1;
-			PlayerPrefs.SetInt("isChangedTimer", isChangdTimer);
-
-
-
-			PlayerPrefs.SetInt("goldAmount", coins);
-			PlayerPrefs.SetInt("torchAmount", torches);
-			PlayerPrefs.SetInt("potionAmount", potions);
-			PlayerPrefs.SetInt("trapAmount", trap);
-			PlayerPrefs.SetInt("potion_mvspeedAmount", potion_mvspeed);
-			PlayerPrefs.SetInt("potion_invisible", potion_invisible);
-			saveData = 1;
-			PlayerPrefs.SetInt("saveData", saveData);
-			PlayerPrefs.Save();
-			SceneManager.LoadScene("EscOptions");
-		}
-
 		anim.SetFloat("Horizontal", hf);
 		anim.SetFloat("Vertical", movement.y);
 		anim.SetFloat("Speed", speed);
@@ -230,10 +198,7 @@ public class playerMovement : MonoBehaviour
 			shopDialog pop = GameObject.FindGameObjectWithTag("desk").GetComponent<shopDialog>();
 			pop.PopUp();
 		}
-		if(collision.gameObject.CompareTag("Glue"))
-        {
-			moveSpeed /= 3;
-        }
+		
 		
 	}
     private void OnTriggerExit2D(Collider2D collision)
@@ -241,10 +206,7 @@ public class playerMovement : MonoBehaviour
 		if (collision.gameObject.CompareTag("desk"))
 			szop.SetTrigger("close");
 
-		if (collision.gameObject.CompareTag("Glue"))
-		{
-			moveSpeed *= 3;
-		}
+	
 		
 	}
 

@@ -8,6 +8,7 @@ public class stopAnimationShop : MonoBehaviour
     private int klucze;
 
     public Animator anim;
+    public PlayerMovementShop counter;
     private GameObject playerPosition;
     private GameObject doorPosition;
     public Animator NextMapAnim;
@@ -36,7 +37,21 @@ public class stopAnimationShop : MonoBehaviour
                     if (Mathf.Abs(playerPosition.transform.position.x - doorPosition.transform.position.x) < 1 && Mathf.Abs(playerPosition.transform.position.y - doorPosition.transform.position.y) < 1)
                     {
                         Destroy(GameObject.FindGameObjectWithTag("Colliber_top"));
-                        anim.SetBool("open", true);
+                        PlayerPrefs.SetInt("goldAmount", counter.coins);
+                        PlayerPrefs.SetInt("torchAmount", counter.torches);
+                        PlayerPrefs.SetInt("potionAmount", counter.potions);
+                        PlayerPrefs.SetInt("trapAmount", counter.trap);
+                        PlayerPrefs.SetInt("keyAmount", counter.keyAmount);
+                        PlayerPrefs.SetInt("keyAmount", counter.keyAmount);
+                        PlayerPrefs.SetInt("potion_inv_amount",counter.potion_invisible);
+
+                        PlayerPrefs.SetInt("potion_mvspeed_amount",counter.potion_mvspeed);
+
+
+                        SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentSceneID")+1);
+                        
+
+
                     }
                 }
 

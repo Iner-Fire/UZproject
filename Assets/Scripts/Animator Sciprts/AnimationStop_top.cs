@@ -10,6 +10,8 @@ public class AnimationStop_top : MonoBehaviour
     public Animator anim;
     public Animator animPath;
     private GameObject playerPosition;
+    public openChest chest;
+    public SpriteChange which;
     private GameObject doorPosition;
     public playerMovement playerMovement;
     int saveData;
@@ -57,24 +59,33 @@ public class AnimationStop_top : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(delay());
+
+            if (AnimationStop_middle.doorPass == true)
+            {
+                PlayerPrefs.SetInt("whichOne", which.whichOne);
+                PlayerPrefs.SetInt("isChanged", chest.isChanged);
+            }
             PlayerPrefs.SetInt("goldAmount", playerMovement.coins);
             PlayerPrefs.SetInt("torchAmount", playerMovement.torches);
             PlayerPrefs.SetInt("potionAmount", playerMovement.potions);
             PlayerPrefs.SetInt("trapAmount", playerMovement.trap);
+            PlayerPrefs.SetInt("potion_mvspeed_amount", playerMovement.potion_mvspeed);
+            PlayerPrefs.SetInt("potion_inv_amount", playerMovement.potion_invisible);
+            PlayerPrefs.SetInt("keyAmount", playerMovement.key.key);
             saveData = 1;
             PlayerPrefs.SetInt("saveData", saveData);
             Scene scene = SceneManager.GetActiveScene();
             if(scene.name == "Game")
             {
-                PlayerPrefs.SetInt("CurrentSceneID", 1);
+                PlayerPrefs.SetInt("CurrentSceneID", SceneManager.GetActiveScene().buildIndex);
             }
             else if(scene.name =="Maze1")
             {
-                PlayerPrefs.SetInt("CurrentSceneID", 2);
+                PlayerPrefs.SetInt("CurrentSceneID", SceneManager.GetActiveScene().buildIndex);
             }
             PlayerPrefs.Save();
             
-            //SceneManager.LoadScene("shopScene");
+            
         }
 
     }

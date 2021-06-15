@@ -16,7 +16,7 @@ namespace Pathfinding {
 	public class AIDestinationSetter : MonoBehaviour {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
-		public SpriteChange which;
+		public Animator MinoAnim;
 		public openChest chest;
 		public GameObject WaypointList;
 		public TorchScript whichKey;
@@ -26,9 +26,12 @@ namespace Pathfinding {
 		IAstarAI ai;
 		private System.Random random = new System.Random();
 		public float DistanceToChase;
+		public AIPath aipath;
 		public float TimeLeft;
 		private float tmp;
 		private float tmp1;
+		public Vector3 dir;
+		private Vector2 movement;
 
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
@@ -45,7 +48,16 @@ namespace Pathfinding {
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
-			if (chest.isChanged == 1 && which.whichOne == 1)
+			
+			MinoAnim.SetFloat("speed", aipath.maxSpeed);
+			dir = target.position - transform.position;
+			dir.Normalize();
+			movement = dir;
+			this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            MinoAnim.SetFloat("up", dir.x);
+			MinoAnim.SetFloat("down", dir.y);
+			
+			if (chest.isChanged == 1 && PlayerPrefs.GetInt("whichOne") == 1)
 			{
 				if (counterTorches.potion_invisible >= 1 && whichKey.whichKey == 3)
 				{
@@ -108,5 +120,19 @@ namespace Pathfinding {
 			Gizmos.color = Color.red;
 			Gizmos.DrawSphere(transform.position, DistanceToChase);
 		}
-	}
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.CompareTag("Glue"))
+            {
+				aipath.maxSpeed /= 3;
+            }
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Glue"))
+            {
+				aipath.maxSpeed *= 3;
+			}
+        }
+    }
 }

@@ -9,6 +9,7 @@ public class ResolutionScript : MonoBehaviour
 
     public Dropdown resolutiondrop;
     public Toggle toggle;
+    bool isFull;
     Resolution[] resolutions;
 
     void Start()
@@ -38,9 +39,26 @@ public class ResolutionScript : MonoBehaviour
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
     }
 
-    public void SetFullScreen(bool isFull)
+    public void SetFullScreen()
     {
-        Screen.fullScreen = isFull;
+
+        if (toggle.isOn)
+        {
+            isFull = true;
+            Debug.Log("full");
+            Screen.fullScreen = false;
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+
+        }
+        else if (!toggle.isOn)
+        {
+            Debug.Log("WIND");
+            Screen.fullScreen = true;
+            isFull = false;
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+
+
+        }
     }
-   
+
 }

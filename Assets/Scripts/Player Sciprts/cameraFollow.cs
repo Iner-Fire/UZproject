@@ -9,16 +9,18 @@ public class cameraFollow : MonoBehaviour
     public float oddalonaKamera;
 
 
-    void Awake()
-    {
-        GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height / 3) / oddalonaKamera);
-    }
+
 
     void Start()
     {
+        
         player = (GameObject.FindGameObjectsWithTag("Player")[0].transform);
     }
-    
+
+    private void Update()
+    {
+        GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height / 2) / oddalonaKamera);
+    }
 
     void LateUpdate()
     {

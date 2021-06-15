@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DestroySpike : MonoBehaviour
 {
@@ -19,6 +20,13 @@ public class DestroySpike : MonoBehaviour
                 Spikes.SetBool("activated", true);
                 hp.currentHealth -= 1;
                 HPbar.SetHP(hp.currentHealth);
+                if (hp.currentHealth == 0)
+                {
+                    int tmp = SceneManager.GetActiveScene().buildIndex;
+                    SceneManager.LoadScene(tmp);
+                }
+
+
             }
         }
     }
@@ -31,8 +39,6 @@ public class DestroySpike : MonoBehaviour
                 isSpiked = 1;
                 Spikes.SetBool("activated", false);
                 Spikes.SetBool("stop", true);
-                //Destroy(this);
-
 
             }
         }

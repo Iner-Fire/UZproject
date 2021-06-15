@@ -6,15 +6,11 @@ using UnityEngine.UI;
 public class PopUpTab : MonoBehaviour
 {
     public GameObject tabWindow;
-    int isChecked = 0;
+    public static int isChecked = 0;
 
      void Start()
     {
-        if (PlayerPrefs.GetInt("isSpeedrun") == 1)
-        {
-            isChecked = PlayerPrefs.GetInt("isSpeedrun");
-        }
-
+        
 
     }
     // Update is called once per frame

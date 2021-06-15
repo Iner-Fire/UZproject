@@ -87,7 +87,12 @@ public class coinScript : MonoBehaviour
                 player.coins -= counterTraps * 3 + 3;
             }
             counterTraps++;
-            player.trap++;
+            if (PlayerPrefs.GetInt("whichOne") == 0 && PlayerPrefs.GetInt("isChanged") == 1)
+                player.potion_mvspeed++;
+            else if (PlayerPrefs.GetInt("whichOne") == 1 && PlayerPrefs.GetInt("isChanged") == 1)
+                player.potion_invisible++;
+            else if (PlayerPrefs.GetInt("isChanged") == 0)
+                player.potions++;
             anim.SetBool("click", true);
             anim.SetBool("idle", true);
             isClicked = true;

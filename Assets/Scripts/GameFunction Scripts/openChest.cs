@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class openChest : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class openChest : MonoBehaviour
     public Sprite potion_invisible;
     public playerMovement item;
     public SpriteChange which;
+    public GameObject Menu;
+    public GameObject scaleAnim;
+    public GameObject scaleAnimChangeItems;
     int isOpened = 0;
     // Start is called before the first frame update
     void Start()
@@ -27,15 +31,20 @@ public class openChest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene currentScene1 = SceneManager.GetActiveScene();
+        string sceneName1 = currentScene1.name;
         playerPostion = GameObject.FindGameObjectWithTag("Player");
         chestPostion = GameObject.FindGameObjectWithTag("Chest");
         if (Input.GetKey(KeyCode.E))
         {
             if (Mathf.Abs(playerPostion.transform.position.x - chestPostion.transform.position.x) < 1 && Mathf.Abs(playerPostion.transform.position.y - chestPostion.transform.position.y) < 1 && isOpened == 0)
             {
+                Menu.SetActive(false);
                 anim.SetBool("open", true);
                 isOpened = 1;
-                popChestAnim.SetBool("open", true);
+                if (sceneName1 == "Maze1" || sceneName1 ==  "Maze2")
+                    scaleAnim.transform.localScale = new Vector3(1, 1, 1);
+                    popChestAnim.SetBool("open", true);
 
             }
         }
@@ -43,14 +52,18 @@ public class openChest : MonoBehaviour
 
     public void CloseChest()
     {
+        
         popChestAnim.SetBool("open", false);
-        item.coins += 15;
+        item.coins += Random.Range(8, 25);
         item.trap += 2;
         popChestAnim.SetBool("close", true);
         anim.SetBool("open", false);
         anim.SetBool("closed", true);
 
-
+        Scene currentScene1 = SceneManager.GetActiveScene();
+        string sceneName1 = currentScene1.name;
+        if (sceneName1 == "Maze1" || sceneName1 == "Maze2")
+            scaleAnimChangeItems.transform.localScale = new Vector3(1, 1, 1);
         changeAnim.SetBool("changeYes", true);
        
         
@@ -58,6 +71,7 @@ public class openChest : MonoBehaviour
 
     public void YesChange()
     {
+        Menu.SetActive(true);
         changeAnim.SetBool("changeYes", false);
         changeAnim.SetBool("closeChange", true);
 
@@ -66,17 +80,22 @@ public class openChest : MonoBehaviour
             item.potion_mvspeed += 1;
             potion.sprite = potion_mvspeed;
             isChanged = 1;
+            PlayerPrefs.SetInt("isChanged",1);
         }
         else if(which.whichOne == 1)
         {
             item.potion_invisible += 1;
             potion.sprite = potion_invisible;
             isChanged = 1;
+            PlayerPrefs.SetInt("isChanged", 1);
         }
+        PlayerPrefs.Save();
     }
     public void NoChange()
     {
+        Menu.SetActive(true);
         changeAnim.SetBool("changeYes", false);
         changeAnim.SetBool("closeChange", true);
+        PlayerPrefs.SetInt("isChanged", 0);
     }
 }

@@ -29,6 +29,8 @@ TagManager:
   - Mino
   - Gold
   - Music
+  - MidDoor
+  - Collider_mid1
   layers:
   - Default
   - TransparentFX

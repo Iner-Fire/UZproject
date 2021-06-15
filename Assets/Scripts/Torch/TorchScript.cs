@@ -128,51 +128,54 @@ public class TorchScript : MonoBehaviour
 
                 break;
         }
-        if (Input.GetButtonDown("Fire1") && counterTorches.torches >=1 && whichKey == 1 &&  
-            Mathf.Abs(playerPosition.transform.position.x - mousePosition.x) < 1 && 
-            Mathf.Abs(playerPosition.transform.position.y - mousePosition.y) < 1)
+        if (!PauseMenu.isGamePaused)
         {
-           
-            counterTorches.torches -= 1;
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            GameObject newClone = Instantiate(torch, new Vector3(mousePos.x,mousePos.y,0),Quaternion.identity);
-            cloneList.Add(newClone);
-           
-            
-        }
-        if (!callTrapFunction)
-        {
-            if (counterTorches.trap >= 1 && whichKey == 2 && Input.GetKeyDown(KeyCode.G))
-            {
-                counterTorches.trap -= 1;
-                playerPosition = GameObject.FindGameObjectWithTag("Player");
-                Instantiate(trapPrefab, new Vector3(playerPosition.transform.position.x, playerPosition.transform.position.y - (float)0.18, 0), Quaternion.identity);
-
-            }
-        }
-
-        if (chest.isChanged == 0)
-        {
-            if (counterTorches.potions >= 1 && whichKey == 3)
+            if (Input.GetButtonDown("Fire1") && counterTorches.torches >= 1 && whichKey == 1 &&
+                Mathf.Abs(playerPosition.transform.position.x - mousePosition.x) < 2 &&
+                Mathf.Abs(playerPosition.transform.position.y - mousePosition.y) < 2)
             {
 
-                counterTorches.potions -= 1;
-                counterTorches.currentHealth += 1;
-                healthSet.SetHP(counterTorches.currentHealth);
+                counterTorches.torches -= 1;
+                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                GameObject newClone = Instantiate(torch, new Vector3(mousePos.x, mousePos.y, 0), Quaternion.identity);
+                cloneList.Add(newClone);
 
 
             }
-        }
-        else if(chest.isChanged == 1 && which.whichOne == 0)
-        {
-            if (counterTorches.potion_mvspeed >= 1 && whichKey == 3)
+            if (!callTrapFunction)
             {
-                Debug.Log("potka speed");
-                counterTorches.potion_mvspeed -= 1;
-                counter.moveSpeed += (float)0.5;
-                StartCoroutine(endPotion(5));
+                if (counterTorches.trap >= 1 && whichKey == 2 && Input.GetKeyDown(KeyCode.G))
+                {
+                    counterTorches.trap -= 1;
+                    playerPosition = GameObject.FindGameObjectWithTag("Player");
+                    Instantiate(trapPrefab, new Vector3(playerPosition.transform.position.x, playerPosition.transform.position.y - (float)0.18, 0), Quaternion.identity);
+
+                }
+            }
+
+            if (chest.isChanged == 0)
+            {
+                if (counterTorches.potions >= 1 && whichKey == 3 && counterTorches.currentHealth < 3)
+                {
+
+                    counterTorches.potions -= 1;
+                    counterTorches.currentHealth += 1;
+                    healthSet.SetHP(counterTorches.currentHealth);
 
 
+                }
+            }
+            else if (chest.isChanged == 1 && which.whichOne == 0)
+            {
+                if (counterTorches.potion_mvspeed >= 1 && whichKey == 3)
+                {
+                    Debug.Log("potka speed");
+                    counterTorches.potion_mvspeed -= 1;
+                    counter.moveSpeed += (float)0.5;
+                    StartCoroutine(endPotion(5));
+
+
+                }
             }
         }
      IEnumerator endPotion(int secs)

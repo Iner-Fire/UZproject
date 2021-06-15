@@ -7,7 +7,7 @@ public class SpriteChange : MonoBehaviour
     public SpriteRenderer potion_mvspeed;
     public Sprite sprite_potion_invisible;
     public Sprite sprite_potion_mvspeed;
-    public int whichOne = 10;
+    public int whichOne;
 
     int random;
 
@@ -18,16 +18,19 @@ public class SpriteChange : MonoBehaviour
 
      void Update()
     {
-        Debug.Log(random);
+
         if (random == 1)
         {
             this.GetComponent<SpriteRenderer>().sprite = sprite_potion_invisible;
             whichOne = 1;
+            PlayerPrefs.SetInt("whichOne", 1);
         }
         else if (random == 0)
         {
             this.GetComponent<SpriteRenderer>().sprite = sprite_potion_mvspeed;
             whichOne = 0;
+            PlayerPrefs.SetInt("whichOne", 0);
         }
+        PlayerPrefs.Save();
     }
 }

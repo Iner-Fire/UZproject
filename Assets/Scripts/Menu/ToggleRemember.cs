@@ -18,9 +18,5 @@ public class ToggleRemember : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

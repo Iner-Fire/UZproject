@@ -8,7 +8,14 @@ public class PlayerMovementShop : MonoBehaviour
 {
 	int currentHealth;
 	int maxHP;
+	public GameObject Menu;
 	public HealthBar healthBar;
+	public int potion_mvspeed;
+	public int potion_invisible;
+	public int deathCounter = 0;
+	public SpriteRenderer spriteRnd;
+	public Sprite potion_in;
+	public Sprite potion_mv;
 	public float moveSpeed = 1f;
 	public Vector2 movement;
 	public Rigidbody2D rigibody;
@@ -33,6 +40,14 @@ public class PlayerMovementShop : MonoBehaviour
 
 	void Awake()
 	{
+		if (PlayerPrefs.GetInt("whichOne") == 1 && PlayerPrefs.GetInt("isChanged") == 1)
+		{
+			spriteRnd.sprite = potion_in;
+		}
+		else if (PlayerPrefs.GetInt("whichOne") == 0 && PlayerPrefs.GetInt("isChanged") == 1)
+		{
+			spriteRnd.sprite = potion_mv;
+		}
 		GameObject FOGM = GameObject.FindGameObjectWithTag("FOGM");
 		GameObject FOGS = GameObject.FindGameObjectWithTag("FOGS");
 		GameObject FOGC = GameObject.FindGameObjectWithTag("FOGC");
@@ -46,15 +61,24 @@ public class PlayerMovementShop : MonoBehaviour
 		if (PlayerPrefs.GetInt("saveData") == 1)
 		{
 
+			deathCounter = PlayerPrefs.GetInt("deathCounter");
+
 			coins = PlayerPrefs.GetInt("goldAmount");
 
 			torches = PlayerPrefs.GetInt("torchAmount");
 
 			trap = PlayerPrefs.GetInt("trapAmount");
+
+			potions = PlayerPrefs.GetInt("potionAmount");
+
+			potion_invisible = PlayerPrefs.GetInt("potion_inv_amount");
+
+			potion_mvspeed = PlayerPrefs.GetInt("potion_mvspeed_amount");
+			
+			
+
 		}
-		this.transform.position = new Vector3(PlayerPrefs.GetFloat("playerPosistionX"),
-			PlayerPrefs.GetFloat("playerPosistionY"),
-			PlayerPrefs.GetFloat("playerPosistionZ"));
+
 	}
 	void Start()
 	{
@@ -65,15 +89,20 @@ public class PlayerMovementShop : MonoBehaviour
 
 	}
 
-	// Update is called once per frame
+	
 	void Update()
 	{
 		keyPickup keyCounter = key.GetComponent<keyPickup>();
 		textCounterCoins.text = coins.ToString();
-		textCounterPotion.text = potions.ToString();
+		if (PlayerPrefs.GetInt("isChanged") ==0)
+			textCounterPotion.text = potions.ToString();
+		else if (PlayerPrefs.GetInt("whichOne") == 0 && PlayerPrefs.GetInt("isChanged") == 1)
+			textCounterPotion.text = potion_mvspeed.ToString();
+		else if (PlayerPrefs.GetInt("whichOne") == 1 && PlayerPrefs.GetInt("isChanged") == 1)
+			textCounterPotion.text = potion_invisible.ToString();
 		textCounterTrap.text = trap.ToString();
 		textCounterTorch.text = torches.ToString();
-		textCounterKeys.text = keyCounter.key.ToString();
+		textCounterKeys.text = key.key.ToString();
 
 		movement.x = Input.GetAxisRaw("Horizontal");
 		movement.y = Input.GetAxisRaw("Vertical");
@@ -89,34 +118,7 @@ public class PlayerMovementShop : MonoBehaviour
 			this.gameObject.transform.localScale = new Vector3(1, 1, 1);
 
 		}
-		/*if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Verical") <= 0.01f || Input.GetAxis("Horizontal") <= 0.01f)
-        {
-			source.Play();
-        }
-        else if(Input.GetAxis("Verical") ==0 || Input.GetAxis("Horizontal") == 0)
-        {
-			source.Stop();
-        }*/
-
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			
-			PlayerPrefs.SetFloat("playerPosistionX", this.gameObject.transform.position.x);
-			PlayerPrefs.SetFloat("playerPosistionY", this.gameObject.transform.position.y);
-			PlayerPrefs.SetFloat("playerPosistionZ", this.gameObject.transform.position.z);
-
-
-			PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex);
-			PlayerPrefs.SetInt("goldAmount", coins);
-			PlayerPrefs.SetInt("torchAmount", torches);
-			PlayerPrefs.SetInt("potionAmount", potions);
-			PlayerPrefs.SetInt("trapAmount", trap);
-			saveData = 1;
-			PlayerPrefs.SetInt("saveData", saveData);
-			PlayerPrefs.Save();
-			SceneManager.LoadScene("EscOptions");
-		}
-
+		
 		anim.SetFloat("Horizontal", hf);
 		anim.SetFloat("Vertical", movement.y);
 		anim.SetFloat("Speed", speed);
@@ -135,23 +137,20 @@ public class PlayerMovementShop : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("desk"))
 		{
+			Menu.SetActive(false);
 			shopDialog pop = GameObject.FindGameObjectWithTag("desk").GetComponent<shopDialog>();
 			pop.PopUp();
 		}
-		if (collision.gameObject.CompareTag("Glue"))
-		{
-			moveSpeed /= 3;
-			currentHealth -= 1;
-			healthBar.SetHP(currentHealth);
-		}
+		
 	}
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		szop.SetTrigger("close");
-		if (collision.gameObject.CompareTag("Glue"))
+		if (collision.gameObject.CompareTag("desk"))
 		{
-			moveSpeed *= 3;
+			Menu.SetActive(true);
+			szop.SetTrigger("close");
 		}
+		
 	}
 }
 

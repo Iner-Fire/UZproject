@@ -15,16 +15,15 @@ public class keyPickup : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PlayerPrefs.SetInt("keyAmount", key);
-        }
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Key"))
         {
             key += 1;
-            Destroy(GameObject.FindGameObjectWithTag("Key"));        }
+            Destroy(GameObject.FindGameObjectWithTag("Key"));
+            //PlayerPrefs.SetInt("keyAmount", key);
+        }
     }
 }

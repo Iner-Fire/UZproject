@@ -7,6 +7,7 @@ public class AnimationStop_middle : MonoBehaviour
     private int klucze;
 
     public Animator anim;
+    public static bool doorPass = false;
     private GameObject playerPosition;
     private GameObject doorPosition;
 
@@ -46,8 +47,10 @@ public class AnimationStop_middle : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.gameObject.CompareTag("Player"))
         {
+            doorPass = true;
             Destroy(GameObject.FindGameObjectWithTag("czarny_pokoj"));
         }
 
