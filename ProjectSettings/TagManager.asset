@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Glue
+  - Key
+  - Door
+  - "G\xF3ra"
+  - Chest
+  - "Drzwi_g\xF3ra"
+  - Drzwi_top
+  - Collider_mid
+  - Colliber_top
+  - Collider_bot
+  - czarny_pokoj
+  - path
+  - endPath
+  - desk
+  - shop
+  - Torch
+  - FOGM
+  - FOGS
+  - FOGC
+  - Mino_GoLeft
+  - Mino_GoRight
+  - Spikes
+  - Mino
+  - Gold
+  - Music
+  - MidDoor
+  - Collider_mid1
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Drzwi
+  - Gracz
+  - FOG
+  - Background
+  - Floor
+  - FOGM
+  - FOGS
+  - "St\xF3\u0142"
+  - Gielerak
+  - Minimap
+  - Test
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: FogOfWar
+    uniqueID: 3322861463
+    locked: 0
+  - name: Floor
+    uniqueID: 2443315697
+    locked: 0
+  - name: Background
+    uniqueID: 3627140245
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Gielerak
+    uniqueID: 2499997125
+    locked: 0
+  - name: "St\xF3\u0142"
+    uniqueID: 3946132155
+    locked: 0
+  - name: Gracz
+    uniqueID: 728222409
+    locked: 0
+  - name: Test
+    uniqueID: 3960735963
+    locked: 0
+  - name: Drzwi
+    uniqueID: 4253420101
+    locked: 0

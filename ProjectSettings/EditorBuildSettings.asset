@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Logo.unity
+    guid: 8d86c0b2ffb8d2f4d9d2cb37c297b5d1
+  - enabled: 1
+    path: Assets/Scenes/IntroCreatedBy.unity
+    guid: 696481bbb56f5f74ba96dc67db2e9aba
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 6a251b8303a09894e9adea948cdcc4b5
+  - enabled: 1
+    path: Assets/Scenes/Maze1.unity
+    guid: 46e514c65bdbce34faa3202eb38abdac
+  - enabled: 1
+    path: Assets/Scenes/Maze2.unity
+    guid: 892093774a5dc854c966a88018f1b538
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 49eb5c5d3ba8d9c419d0f53e00ec2ffd
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 3957c7bda20051f45b09e0eec2970d5a
+  - enabled: 1
+    path: Assets/Scenes/shopScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/EscOptions.unity
+    guid: a4273632ba3b4594e853670b696c8680
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 615604310a9b5d046b49c93a50a309e8
+  m_configObjects: {}
